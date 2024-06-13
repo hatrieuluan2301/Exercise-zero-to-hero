@@ -1,0 +1,14 @@
+def compute_interest(money, period):
+    daily_interest_rate = 1 / 365  # Lãi suất hàng ngày
+    result = money
+
+    for _ in range(period):
+        result *= (1 + daily_interest_rate)
+
+    return result
+
+money = float(input("Enter the initial amount: "))
+period = int(input("Enter number of days to saving time: "))
+
+total_savingmoney = compute_interest(money, period)
+print (total_savingmoney)
