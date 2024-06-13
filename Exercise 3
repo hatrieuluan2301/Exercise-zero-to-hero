@@ -1,0 +1,13 @@
+def find_squared_root(a):
+    epsilon = 0.001
+    x_n = a
+    while True:
+        x_next = (1/2) * (x_n + (a/x_n))
+        if abs(x_next - x_n) < epsilon:
+            break
+        x_n = x_next
+    return x_next
+
+a = int(input("Vui lòng nhập số cần tính căn bậc 2: "))
+result = find_squared_root(a)
+print (result)
